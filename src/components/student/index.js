@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import style from './style.less';
 
+
 export default class Student extends Component {
 	render() {
 		return (

@@ -16,7 +16,7 @@ module.exports = {
 
 	output: {
 		path: path.resolve(__dirname, "build"),
-		publicPath: '/',
+		publicPath: '/fccscores/',
 		filename: 'bundle.js'
 	},
 
@@ -171,7 +171,7 @@ module.exports = {
 			replacement: () => 'return;('
 		}]),
 		new OfflinePlugin({
-			relativePaths: false,
+			relativePaths: true,
 			AppCache: false,
 			excludes: ['_redirects'],
 			ServiceWorker: {
@@ -184,7 +184,7 @@ module.exports = {
 					requestTypes: ['navigate']
 				}
 			],
-			publicPath: '/'
+			publicPath: '/fccscores/'
 		})
 	] : []),
 
@@ -204,7 +204,7 @@ module.exports = {
 	devServer: {
 		port: process.env.PORT || 8080,
 		host: 'localhost',
-		publicPath: '/',
+		publicPath: '/fccscores/',
 		contentBase: './src',
 		historyApiFallback: true,
 		open: true,
